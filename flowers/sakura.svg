@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 300" fill="none">
+  <defs>
+    <g id="blossom" stroke="#B75943" stroke-width="2" stroke-linejoin="round">
+      <path d="M0 1C-17-8-15-28-4-25L0-20 4-25C15-28 17-8 0 1Z" fill="#F4A6C1"/>
+      <path d="M0 1C-17-8-15-28-4-25L0-20 4-25C15-28 17-8 0 1Z" fill="#F4A6C1" transform="rotate(72)"/>
+      <path d="M0 1C-17-8-15-28-4-25L0-20 4-25C15-28 17-8 0 1Z" fill="#F4A6C1" transform="rotate(144)"/>
+      <path d="M0 1C-17-8-15-28-4-25L0-20 4-25C15-28 17-8 0 1Z" fill="#F4A6C1" transform="rotate(216)"/>
+      <path d="M0 1C-17-8-15-28-4-25L0-20 4-25C15-28 17-8 0 1Z" fill="#F4A6C1" transform="rotate(288)"/>
+      <path d="M0 0v-9m0 9 9-3M0 0l5 8M0 0l-6 7M0 0l-8-4" stroke-linecap="round"/>
+      <circle r="4" fill="#F8C48D"/>
+    </g>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M95 177H125V205L139 222V267Q110 281 81 267V222L95 205Z" fill="#E3EEE7" fill-opacity=".5" stroke="#AE9E87" stroke-width="2.5"/>
+    <path d="M104 266C110 220 112 179 115 142L128 99 144 60M116 147 87 120 72 77M123 115l28 6 15-23M132 88l-20-26" stroke="#94715B" stroke-width="3"/>
+    <path d="M114 166C92 166 83 155 81 142 101 141 110 151 114 166Z" fill="#A7B49B" stroke="#6E8774" stroke-width="2.5"/>
+    <path d="M138 82C157 80 164 67 163 56 145 58 138 67 138 82Z" fill="#A7B49B" stroke="#6E8774" stroke-width="2.5"/>
+    <path d="M82 114C68 118 58 112 55 104 69 100 77 104 82 114Z" fill="#A7B49B" stroke="#6E8774" stroke-width="2.5"/>
+    <use href="#blossom" transform="translate(72 76) rotate(-18)"/>
+    <use href="#blossom" transform="translate(113 52) scale(.8) rotate(13)"/>
+    <use href="#blossom" transform="translate(153 108) scale(.88) rotate(20)"/>
+    <use href="#blossom" transform="translate(113 116) rotate(8)"/>
+    <path d="M145 59C135 53 139 40 146 40 153 42 154 53 145 59Z" fill="#E989AF" stroke="#B75943" stroke-width="2.5"/>
+    <path d="M83 230V266Q110 278 137 266V230Q110 237 83 230Z" fill="#BCD5CB" fill-opacity=".35"/>
+    <path d="M82 230Q110 237 138 230M95 177V205L81 222V267Q110 281 139 267V222L125 205V177" stroke="#AE9E87" stroke-width="2.5"/>
+    <ellipse cx="110" cy="177" rx="15" ry="4" stroke="#AE9E87" stroke-width="2.5"/>
+    <path d="M91 232v26m11-71v14" stroke="#FFFCF6" stroke-width="4"/>
+    <path d="M173 153c-8-2-11-10-6-13 7-3 12 5 6 13Z" fill="#F4A6C1"/>
+    <path d="m46 153-5 5m141-99 5-3" stroke="#B75943" stroke-width="2.5"/>
+  </g>
+</svg>

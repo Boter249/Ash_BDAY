@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 300" fill="none">
+  <defs>
+    <path id="outer-petal" d="M0 2C-9-11-12-36-4-49-2-53 2-53 4-49 12-36 9-11 0 2Z"/>
+    <path id="inner-petal" d="M0 2C-8-8-8-24-3-31-1-34 1-34 3-31 8-24 8-8 0 2Z"/>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M77 180H143L138 268Q110 282 82 268Z" fill="#E3EEE7" fill-opacity=".5" stroke="#AE9E87" stroke-width="2.5"/>
+    <path d="M109 265C113 218 104 148 110 89" stroke="#6E8774" stroke-width="3"/>
+    <path d="M107 173C86 173 75 159 73 144 94 143 105 156 107 173Z" fill="#A7B49B" stroke="#6E8774" stroke-width="2.5"/>
+    <path d="M109 151C124 151 141 136 144 121 123 119 113 135 109 151Z" fill="#A7B49B" stroke="#6E8774" stroke-width="2.5"/>
+    <path d="m108 170-22-17m25-6 20-15" stroke="#6E8774" stroke-width="2"/>
+    <g transform="translate(110 86)" fill="#F8C48D" stroke="#B75943" stroke-width="2">
+      <use href="#outer-petal"/>
+      <use href="#outer-petal" transform="rotate(30)"/>
+      <use href="#outer-petal" transform="rotate(60)"/>
+      <use href="#outer-petal" transform="rotate(90)"/>
+      <use href="#outer-petal" transform="rotate(120)"/>
+      <use href="#outer-petal" transform="rotate(150)"/>
+      <use href="#outer-petal" transform="rotate(180)"/>
+      <use href="#outer-petal" transform="rotate(210)"/>
+      <use href="#outer-petal" transform="rotate(240)"/>
+      <use href="#outer-petal" transform="rotate(270)"/>
+      <use href="#outer-petal" transform="rotate(300)"/>
+      <use href="#outer-petal" transform="rotate(330)"/>
+      <g fill="#F5D59F" transform="rotate(15)">
+        <use href="#inner-petal"/>
+        <use href="#inner-petal" transform="rotate(30)"/>
+        <use href="#inner-petal" transform="rotate(60)"/>
+        <use href="#inner-petal" transform="rotate(90)"/>
+        <use href="#inner-petal" transform="rotate(120)"/>
+        <use href="#inner-petal" transform="rotate(150)"/>
+        <use href="#inner-petal" transform="rotate(180)"/>
+        <use href="#inner-petal" transform="rotate(210)"/>
+        <use href="#inner-petal" transform="rotate(240)"/>
+        <use href="#inner-petal" transform="rotate(270)"/>
+        <use href="#inner-petal" transform="rotate(300)"/>
+        <use href="#inner-petal" transform="rotate(330)"/>
+      </g>
+      <circle r="12" fill="#E9B36D"/>
+      <path d="m-4-3 2 1m6-3 1 2m-6 5 2 1m6-2-1 2"/>
+    </g>
+    <path d="m80 219 3 49q27 12 54 0l3-49q-30 8-60 0Z" fill="#BCD5CB" fill-opacity=".35"/>
+    <path d="M80 219q30 8 60 0M77 180l5 88q28 14 56 0l5-88" stroke="#AE9E87" stroke-width="2.5"/>
+    <ellipse cx="110" cy="180" rx="33" ry="5" stroke="#AE9E87" stroke-width="2.5"/>
+    <path d="m88 195 3 58m8-59 1 14" stroke="#FFFCF6" stroke-width="4"/>
+    <path d="m37 110 3-7 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="#A7B49B"/>
+    <path d="m168 53 4-6m-1 24 7 2" stroke="#B75943" stroke-width="2.5"/>
+  </g>
+</svg>
