@@ -1,0 +1,25 @@
+.magnolia-dialog { padding-bottom: 34px; }
+.magnolia-gift-stage { width: min(100%, 320px); margin: 12px auto 22px; }
+.magnolia-gift-button { display: block; width: 100%; padding: 0; border: 0; border-radius: 12px; background: transparent; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.magnolia-gift-button:disabled { cursor: default; }
+.magnolia-gift-button:focus-visible { outline: 3px solid #ba7854; outline-offset: 4px; }
+.magnolia-gift-hint { margin: 8px 0 0; color: var(--muted); font: italic 14px/1.5 Georgia, serif; }
+.magnolia-gift-art { display: block; width: 100%; height: auto; overflow: visible; }
+.magnolia-gift-base, .magnolia-gift-lid, .magnolia-ribbon-horizontal, .magnolia-ribbon-vertical, .magnolia-gift-sparkles { transform-box: fill-box; transform-origin: center; }
+.magnolia-gift-sparkles { opacity: .65; }
+.is-unwrapping .magnolia-ribbon-horizontal { animation: magnolia-ribbon-open .5s ease forwards; }
+.is-unwrapping .magnolia-ribbon-vertical { animation: magnolia-ribbon-peel .65s ease forwards; }
+.is-unwrapping .magnolia-gift-lid { animation: magnolia-lid-open .95s .2s cubic-bezier(.2, .7, .3, 1) forwards; }
+.is-unwrapping .magnolia-gift-base { animation: magnolia-box-open .65s .75s ease forwards; }
+.is-unwrapping .magnolia-gift-sparkles { animation: magnolia-sparkle 1.4s ease forwards; }
+.magnolia-reveal { padding: 22px 0 0; animation: magnolia-message-in .5s ease both; }
+.magnolia-reveal h2 { font-size: clamp(42px, 10vw, 72px); letter-spacing: -2px; line-height: 1.15; }
+#magnolia-amount:focus { outline: none; }
+.magnolia-message { max-width: 44ch; margin: 26px auto 0; color: var(--ink); font: 16px/1.85 "Trebuchet MS", Arial, sans-serif; overflow-wrap: anywhere; }
+@keyframes magnolia-ribbon-open { to { transform: scaleX(1.5); opacity: 0; } }
+@keyframes magnolia-ribbon-peel { to { transform: translate(40px, 35px) rotate(28deg); opacity: 0; } }
+@keyframes magnolia-lid-open { 25% { transform: translateY(-14px) rotate(-4deg); } to { transform: translate(-30px, -68px) rotate(-18deg); opacity: 0; } }
+@keyframes magnolia-box-open { to { transform: translateY(20px) scale(.9); opacity: 0; } }
+@keyframes magnolia-sparkle { 45% { transform: scale(1.14); opacity: 1; } to { transform: scale(1.3); opacity: 0; } }
+@keyframes magnolia-message-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 480px) { .magnolia-message { font-size: 15px; } .magnolia-dialog { padding-bottom: 26px; } }

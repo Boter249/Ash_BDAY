@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcf6ec">
+  <meta name="description" content="Four flowers for your birthday: chrysanthemum, tulip, sakura, and Thai magnolia.">
+  <title>Flowers for Ash</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flowers.css">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="magnolia.css">
+  <link rel="stylesheet" href="sakura.css">
+  <link rel="stylesheet" href="final.css">
+  <script src="flowers.js" defer></script>
+  <script src="table.js" defer></script>
+  <script src="magnolia.js" defer></script>
+  <script src="sakura.js" defer></script>
+  <script src="final-screen.js" defer></script>
+  <script src="final.js" defer></script>
+</head>
+<body class="flowers-page">
+  <div id="flower-screen">
+  <div class="confetti-pattern" aria-hidden="true"></div>
+  <main class="flower-main">
+    <article class="flower-invitation" aria-labelledby="flowers-title">
+      <div class="tape" aria-hidden="true"></div>
+      <header class="flower-heading">
+        <h1 id="flowers-title">Pick a flower!</h1>
+      </header>
+      <div class="flower-garden" role="group" aria-label="Flower vase buttons">
+        <button class="flower-button" type="button" data-flower="chrysanthemum" aria-label="Chrysanthemum" aria-haspopup="dialog" aria-controls="table-surprise">
+          <img src="flowers/chrysanthemum.svg" alt="" width="220" height="300">
+          <span class="flower-name">Chrysanthemum</span>
+        </button>
+        <button class="flower-button" type="button" data-flower="tulip" aria-label="Tulip" aria-haspopup="dialog" aria-controls="tulip-surprise">
+          <img src="flowers/tulip.svg" alt="" width="220" height="300">
+          <span class="flower-name">Tulip</span>
+        </button>
+        <button class="flower-button" type="button" data-flower="sakura" aria-label="Sakura" aria-haspopup="dialog" aria-controls="sakura-surprise">
+          <img src="flowers/sakura.svg" alt="" width="220" height="300">
+          <span class="flower-name">Sakura</span>
+        </button>
+        <button class="flower-button" type="button" data-flower="thai-magnolia" aria-label="Thai magnolia" aria-haspopup="dialog" aria-controls="magnolia-surprise">
+          <img src="flowers/thai-magnolia.svg" alt="" width="220" height="300">
+          <span class="flower-name">Thai magnolia</span>
+        </button>
+      </div>
+      <div class="flower-finish" aria-live="polite">
+        <a class="button yes flower-done" id="flowers-done" href="final.html" hidden>Done</a>
+      </div>
+    </article>
+  </main>
+  <dialog class="tulip-dialog" id="tulip-surprise" aria-label="Tulip birthday surprise">
+    <button class="surprise-close" type="button" aria-label="Close surprise" data-close-surprise>×</button>
+    <div id="tulip-player">
+      <div class="tulip-gif-frame">
+        <img id="tulip-gif" src="media/wait-a-minute-who-are-you.gif" data-duration-ms="4960" width="640" height="480" alt="Kazoo Kid saying: Wait a minute, who are you?">
+      </div>
+      <p class="playback-note" id="tulip-playback-note" role="status" hidden></p>
+      <button class="button yes tulip-play-sound" id="tulip-play-sound" type="button" hidden>Play sound</button>
+    </div>
+    <audio id="tulip-audio" src="media/waitaminute.mp3" preload="auto"></audio>
+    <section class="birthday-reveal" id="tulip-birthday" aria-labelledby="tulip-birthday-title" hidden>
+      <img class="birthday-tulip" src="flowers/tulip.svg" width="220" height="300" alt="">
+      <!-- Edit your birthday message here. It appears after the GIF. -->
+      <h2 id="tulip-birthday-title" tabindex="-1">Happy Birthday ❤️</h2>
+      <div class="birthday-letter">
+        <p>I hope today reminds you of just how special you are.</p>
+        <p>I truly desire atleast on your birthday, more than anything that you feel appreciated, valued, and loved. Not because of how strong you have to be, but simply because of who you are.</p>
+        <p>I hope this next chapter of your life brings you happiness that will last a lifetime as you honestly deserve it, obtain peace without being constantly on hard mode and not needing to conform to something that is not yourself.</p>
+        <p>You have become someone I care about, someone whose happiness matters to me, and someone I feel fortunate to share moments with, whether they're filled with laughter or quieter conversations. I am so proud of the effort you have put into streaming and your mental health/</p>
+        <p>Thank you for allowing me to be a part of your life. Here is to more memories, conversations, and laughs with you. Happy Birthday Ash</p>
+      </div>
+      <div class="surprise-actions">
+        <button class="button yes" id="tulip-replay" type="button">Watch again</button>
+        <button class="surprise-back" type="button" data-close-surprise>Back to the flowers</button>
+      </div>
+    </section>
+  </dialog>
+  <dialog class="tulip-dialog table-dialog" id="table-surprise" aria-label="Chrysanthemum birthday surprise">
+    <button class="surprise-close" type="button" aria-label="Close brick puzzle" data-close-table>×</button>
+    <section id="table-puzzle" aria-labelledby="table-title">
+      <h2 id="table-title">One last brick</h2>
+      <p class="table-instructions" id="table-instructions">Place the last brick on top.<br>Drag it into the dotted space, or tap the brick and then the space.</p>
+      <div class="brick-scene" id="brick-scene">
+        <svg class="table-art" viewBox="0 0 640 460" fill="none" role="img" aria-labelledby="table-art-title">
+          <title id="table-art-title">A glass table holding a pyramid of nine bricks, with its top brick missing.</title>
+          <defs>
+            <g id="table-brick" stroke="#9E5C49" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M0 14 22 0H102L80 14Z" fill="#E8B198"/>
+              <path d="M0 14H80V52H0Z" fill="#D58D75"/>
+              <path d="M80 14 102 0V38L80 52Z" fill="#BB735F"/>
+              <path d="M13 25h16m24 15h14M36 7h18" stroke="#B5755E" stroke-width="2"/>
+            </g>
+          </defs>
+          <g stroke-linecap="round" stroke-linejoin="round">
+            <g class="glass-table">
+            <path d="M92 323H112L102 432H86Z" fill="#E3EEE7" fill-opacity=".7" stroke="#9BAF9F" stroke-width="2.5"/>
+            <path d="M539 324H559L569 432H553Z" fill="#E3EEE7" fill-opacity=".7" stroke="#9BAF9F" stroke-width="2.5"/>
+            <path d="M156 310H171L166 407H152ZM488 310H503L508 407H494Z" fill="#E3EEE7" fill-opacity=".45" stroke="#AEBAAC" stroke-width="2"/>
+            <path d="M102 365H551M111 335l426 1" stroke="#B7C8BB" stroke-width="3"/>
+            <path d="M14 305H578L625 335H61Z" fill="#E3EEE7" fill-opacity=".6" stroke="#9BAF9F" stroke-width="2.5"/>
+            <path d="M61 335H625V343H61L14 313V305" fill="#CDDED3" fill-opacity=".4" stroke="#9BAF9F" stroke-width="2.5"/>
+            <path d="M61 335v8m33-25h106m304 9h77M95 349l-5 66m468-65 5 65" stroke="#FFFCF6" stroke-width="4"/>
+            </g>
+            <g class="glass-cracks" stroke="#7B9A8A" stroke-width="2" aria-hidden="true">
+              <path d="m322 320-57-8-38 17-52-21m147 12 51-10 37 22 63-18m-151 6-12 14 22 8m-10-22 4-15m-135 14-18 16m285-17 34 17"/>
+            </g>
+            <g class="glass-shards" fill="#DDEBE5" fill-opacity=".8" stroke="#91AC9E" stroke-width="2" aria-hidden="true">
+              <path class="glass-shard" style="--shard-x:-12px;--shard-y:97px;--shard-turn:-26deg" d="m14 305 132 0-48 23Z"/>
+              <path class="glass-shard" style="--shard-x:13px;--shard-y:102px;--shard-turn:34deg" d="m146 305 77 0-25 30-100-7Z"/>
+              <path class="glass-shard" style="--shard-x:-26px;--shard-y:88px;--shard-turn:-38deg" d="m223 305 99 15-76 15-48 0Z"/>
+              <path class="glass-shard" style="--shard-x:8px;--shard-y:105px;--shard-turn:24deg" d="m223 305 150 0-51 15Z"/>
+              <path class="glass-shard" style="--shard-x:21px;--shard-y:91px;--shard-turn:-31deg" d="m322 320 51-15 53 30H246Z"/>
+              <path class="glass-shard" style="--shard-x:35px;--shard-y:98px;--shard-turn:21deg" d="m373 305 121 0-29 30h-39Z"/>
+              <path class="glass-shard" style="--shard-x:14px;--shard-y:82px;--shard-turn:-24deg" d="m494 305h84l47 30H465Z"/>
+              <path class="glass-shard" style="--shard-x:-30px;--shard-y:99px;--shard-turn:14deg" d="m14 305 84 23 100 7H61Z"/>
+              <path class="glass-shard" style="--shard-x:-18px;--shard-y:29px;--shard-turn:-61deg" d="m93 343 14 0-10 45-8-10Z"/>
+              <path class="glass-shard" style="--shard-x:-25px;--shard-y:12px;--shard-turn:56deg" d="m89 378 8 10-3 44H86Z"/>
+              <path class="glass-shard" style="--shard-x:22px;--shard-y:27px;--shard-turn:48deg" d="m543 343h18l3 40-13-11Z"/>
+              <path class="glass-shard" style="--shard-x:16px;--shard-y:8px;--shard-turn:-57deg" d="m551 372 13 11 5 49h-16Z"/>
+              <path class="glass-shard" style="--shard-x:31px;--shard-y:24px;--shard-turn:37deg" d="m157 329 11 0-2 36-13 22Z"/>
+              <path class="glass-shard" style="--shard-x:-16px;--shard-y:13px;--shard-turn:-42deg" d="m153 387 13-22v42h-14Z"/>
+              <path class="glass-shard" style="--shard-x:-19px;--shard-y:22px;--shard-turn:-33deg" d="m491 329h13l1 39-11 20Z"/>
+              <path class="glass-shard" style="--shard-x:27px;--shard-y:14px;--shard-turn:46deg" d="m494 388 11-20 3 39h-14Z"/>
+            </g>
+            <g class="brick-pyramid">
+              <use class="falling-brick" style="--fall-x:-38px;--fall-y:84px;--fall-turn:-14deg" href="#table-brick" x="134" y="275"/>
+              <use class="falling-brick" style="--fall-x:14px;--fall-y:100px;--fall-turn:13deg" href="#table-brick" x="224" y="275"/>
+              <use class="falling-brick" style="--fall-x:22px;--fall-y:83px;--fall-turn:-10deg" href="#table-brick" x="314" y="275"/>
+              <use class="falling-brick" style="--fall-x:45px;--fall-y:98px;--fall-turn:18deg" href="#table-brick" x="404" y="275"/>
+              <use class="falling-brick" style="--fall-x:-55px;--fall-y:130px;--fall-turn:-22deg" href="#table-brick" x="179" y="237"/>
+              <use class="falling-brick" style="--fall-x:-12px;--fall-y:143px;--fall-turn:15deg" href="#table-brick" x="269" y="237"/>
+              <use class="falling-brick" style="--fall-x:48px;--fall-y:126px;--fall-turn:-17deg" href="#table-brick" x="359" y="237"/>
+              <use class="falling-brick" style="--fall-x:-34px;--fall-y:177px;--fall-turn:22deg" href="#table-brick" x="224" y="199"/>
+              <use class="falling-brick" style="--fall-x:35px;--fall-y:164px;--fall-turn:-18deg" href="#table-brick" x="314" y="199"/>
+            </g>
+            <path d="m167 123 3-7 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="#A7B49B"/>
+            <path d="m464 149 5-6m-1 25 8 2" stroke="#B75943" stroke-width="2.5"/>
+          </g>
+        </svg>
+        <button class="brick-target" id="brick-target" type="button" aria-label="Place the selected brick at the top of the pyramid" aria-disabled="true">
+          <svg viewBox="-4 -4 112 62" fill="none" aria-hidden="true"><path d="M0 14 22 0H102V38L80 52H0V14L80 14 102 0M80 14V52"/></svg>
+        </button>
+        <button class="loose-brick" id="loose-brick" type="button" aria-label="Pick up the last brick" aria-pressed="false" aria-describedby="table-instructions" draggable="false">
+          <svg viewBox="-4 -4 112 62" aria-hidden="true"><use href="#table-brick"/></svg>
+        </button>
+      </div>
+      <p class="table-status" id="table-status" role="status" aria-live="polite">Just one piece left.</p>
+      <div class="table-audio-actions" id="table-audio-actions" hidden>
+        <button class="button yes" id="table-play-audio" type="button" hidden>Play sound</button>
+        <button class="surprise-back" id="table-continue" type="button" hidden>Continue</button>
+      </div>
+    </section>
+    <section class="table-gift" id="table-gift" aria-labelledby="table-gift-title" hidden>
+      <h2 id="table-gift-title" tabindex="-1">Click the button to save the table PLEASE ;-;</h2>
+      <a class="button yes table-link" id="table-save" href="https://www.kudoboard.com/boards/FaRBXjBB" target="_blank" rel="noopener noreferrer">Save our table <span aria-hidden="true">↗</span></a>
+      <div class="surprise-actions">
+        <button class="surprise-back" id="table-reset" type="button">Stack again</button>
+        <button class="surprise-back" type="button" data-close-table>Back to the flowers</button>
+      </div>
+    </section>
+    <audio id="table-audio" src="media/ourtable.mp3" preload="none"></audio>
+  </dialog>
+  <dialog class="tulip-dialog magnolia-dialog" id="magnolia-surprise" aria-label="Thai magnolia birthday gift">
+    <button class="surprise-close" type="button" aria-label="Close gift" data-close-magnolia>×</button>
+    <audio id="magnolia-audio" src="media/PartyBlower.mp3" preload="auto"></audio>
+    <div class="magnolia-gift-stage" id="magnolia-gift-stage">
+      <button class="magnolia-gift-button" id="magnolia-unwrap" type="button" aria-label="Unwrap your gift" aria-describedby="magnolia-gift-hint">
+      <svg class="magnolia-gift-art" viewBox="0 0 320 280" fill="none" aria-hidden="true">
+        <g stroke-linecap="round" stroke-linejoin="round">
+          <g class="magnolia-gift-sparkles" fill="#F8C48D" stroke="#B75943" stroke-width="2">
+            <path d="m61 92 4-10 4 10 10 4-10 4-4 10-4-10-10-4Z"/>
+            <path d="m249 72 4-10 4 10 10 4-10 4-4 10-4-10-10-4Z"/>
+            <path d="m261 183 3-7 3 7 7 3-7 3-3 7-3-7-7-3Z" fill="#A7B49B" stroke="#6E8774"/>
+            <path d="m50 191 3-7 3 7 7 3-7 3-3 7-3-7-7-3Z" fill="#A7B49B" stroke="#6E8774"/>
+          </g>
+          <g class="magnolia-gift-base" stroke="#B75943" stroke-width="3">
+            <rect x="88" y="119" width="144" height="117" rx="7" fill="#EAA3A2"/>
+            <path d="M99 132v89m122-89v89" stroke="#F0B8AF" stroke-width="3"/>
+            <rect class="magnolia-ribbon-horizontal" x="88" y="163" width="144" height="23" fill="#F8C48D"/>
+            <rect class="magnolia-ribbon-vertical" x="148" y="119" width="24" height="117" fill="#F8C48D"/>
+          </g>
+          <g class="magnolia-gift-lid" stroke="#B75943" stroke-width="3">
+            <path d="M157 96C113 95 90 66 107 54 127 39 153 72 157 96Z" fill="#F8C48D"/>
+            <path d="M163 96C207 95 230 66 213 54 193 39 167 72 163 96Z" fill="#F8C48D"/>
+            <path d="M157 93c-14-15-28-24-41-29m47 29c14-15 28-24 41-29" stroke="#DC9F69"/>
+            <rect x="76" y="96" width="168" height="34" rx="5" fill="#F0B8AF"/>
+            <path d="M148 96h24v34h-24Z" fill="#F8C48D"/>
+            <path d="M154 88h12v10h-12Z" fill="#E9B36D"/>
+          </g>
+          <path d="m57 137-7-3m215-17 7-3m-31-75 5-6" stroke="#B75943" stroke-width="3"/>
+        </g>
+      </svg>
+      </button>
+      <p class="magnolia-gift-hint" id="magnolia-gift-hint">Click the gift to unwrap</p>
+    </div>
+    <section class="magnolia-reveal" id="magnolia-reveal" aria-labelledby="magnolia-amount" hidden>
+      <h2 id="magnolia-amount" tabindex="-1">1000 bones</h2>
+      <p class="magnolia-message">As much as I wish I could have purchased gifts directly over, this is the next best thing. This is for your streaming setup, PC goal, or anything you need it for! This has been already sent via your Streamlabs donation</p>
+      <div class="surprise-actions">
+        <button class="surprise-back" id="magnolia-replay" type="button">Unwrap again</button>
+        <button class="surprise-back" id="magnolia-play-sound" type="button" hidden>Play birthday sound</button>
+        <button class="surprise-back" type="button" data-close-magnolia>Back to the flowers</button>
+      </div>
+    </section>
+  </dialog>
+  <dialog class="sakura-dialog" id="sakura-surprise" aria-label="Sakura travel promise">
+    <button class="surprise-close sakura-close" type="button" aria-label="Close airplane surprise" data-close-sakura>×</button>
+    <button class="sakura-sound" id="sakura-sound" type="button" aria-pressed="false">Play plane sound</button>
+    <div class="sakura-sky" id="sakura-sky" aria-hidden="true">
+      <svg class="sakura-cloud sakura-cloud-left" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z" fill="#FFFCF6" stroke="#D9DECF" stroke-width="2"/></svg>
+      <svg class="sakura-cloud sakura-cloud-right" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z" fill="#FFFCF6" stroke="#D9DECF" stroke-width="2"/></svg>
+      <svg class="sakura-cloud sakura-cloud-top-middle" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z"/></svg>
+      <svg class="sakura-cloud sakura-cloud-top-right" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z"/></svg>
+      <svg class="sakura-cloud sakura-cloud-middle-left" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z"/></svg>
+      <svg class="sakura-cloud sakura-cloud-bottom-left" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z"/></svg>
+      <svg class="sakura-cloud sakura-cloud-bottom-right" viewBox="0 0 240 95" fill="none"><path d="M28 77C2 77 2 43 29 42 26 12 68 5 81 31 99-8 157 1 159 35 186 20 212 35 209 54 243 51 247 83 220 83H28Z"/></svg>
+      <div class="sakura-plane" id="sakura-plane">
+        <svg viewBox="0 0 360 180" fill="none">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="3">
+            <g class="sakura-plane-trail" stroke="#C9BAA3"><path d="M4 104h23M9 118h14M1 91h16"/></g>
+            <path d="m155 101-39-49h28l72 52Z" fill="#A7B49B" stroke="#6E8774"/>
+            <path d="M50 99 34 36H62L112 101Z" fill="#EAA3A2" stroke="#B75943"/>
+            <path d="m44 60 22 2m-18 13 29 2" stroke="#F8C48D" stroke-width="5"/>
+            <path d="M30 98 255 94C281 94 302 105 321 115 338 120 337 130 316 132L72 139C48 139 34 127 30 114Z" fill="#FFF1D5" stroke="#B75943"/>
+            <path d="M40 123 318 120" stroke="#EAA3A2" stroke-width="6"/>
+            <path d="m265 102 15 1 17 10h-31Z" fill="#A7B49B" stroke="#6E8774" stroke-width="2.5"/>
+            <g fill="#A7B49B" stroke="#6E8774" stroke-width="2">
+              <rect x="91" y="105" width="10" height="10" rx="3"/>
+              <rect x="114" y="104" width="10" height="10" rx="3"/>
+              <rect x="137" y="104" width="10" height="10" rx="3"/>
+              <rect x="160" y="103" width="10" height="10" rx="3"/>
+              <rect x="183" y="103" width="10" height="10" rx="3"/>
+              <rect x="206" y="102" width="10" height="10" rx="3"/>
+              <rect x="229" y="102" width="10" height="10" rx="3"/>
+            </g>
+            <path d="m155 119-43 43h28l91-43Z" fill="#F0B8AF" stroke="#B75943"/>
+            <path d="M171 144h25c11 0 14-12 2-15h-10Z" fill="#F8C48D" stroke="#B75943"/>
+            <path d="M188 133v8" stroke="#B75943" stroke-width="2"/>
+            <path d="m48 112 29 5-23 8-17-1Z" fill="#EAA3A2" stroke="#B75943"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <section class="sakura-promise" id="sakura-promise" aria-labelledby="sakura-promise-title" hidden>
+      <h2 id="sakura-promise-title" tabindex="-1">a promise for you to visit the USA</h2>
+      <div class="surprise-actions">
+        <button class="button yes" id="sakura-replay" type="button">Fly again</button>
+        <button class="surprise-back" type="button" data-close-sakura>Back to the flowers</button>
+      </div>
+    </section>
+  </dialog>
+  </div>
+</body>
+</html>

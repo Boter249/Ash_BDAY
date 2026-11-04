@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcf6ec">
+  <meta name="description" content="A little birthday surprise. One question, two buttons, and a very cheeky No.">
+  <title>A little birthday surprise</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%F0%9F%8E%81%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="confetti-pattern" aria-hidden="true"></div>
+  <main>
+    <article class="invitation" id="invitation" aria-labelledby="title">
+      <div class="tape" aria-hidden="true"></div>
+      <span class="occasion">BIG BIRTHDAY ASH</span>
+      <div class="gift" aria-hidden="true">
+        <svg viewBox="0 0 160 142" fill="none">
+          <path d="M77 52C34 52 26 19 44 15c20-5 33 37 33 37ZM82 52c43 0 51-33 33-37-20-5-33 37-33 37Z" fill="#F8C48D" stroke="#B75943" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M34 66h92v63a6 6 0 0 1-6 6H40a6 6 0 0 1-6-6V66Z" fill="#EAA3A2" stroke="#B75943" stroke-width="3"/>
+          <path d="M73 67h16v68H73z" fill="#F8C48D" stroke="#B75943" stroke-width="3"/>
+          <rect x="27" y="50" width="106" height="23" rx="4" fill="#F0B8AF" stroke="#B75943" stroke-width="3"/>
+          <path d="M73 51h16v21H73z" fill="#F8C48D" stroke="#B75943" stroke-width="3"/>
+          <path d="m12 38 3-7 3 7 7 3-7 3-3 7-3-7-7-3 7-3ZM140 90l2-6 3 6 6 3-6 2-3 6-2-6-6-2 6-3Z" fill="#6E8774"/>
+          <path d="m137 20 4-6m-1 28 8 2M13 92l-6 4" stroke="#B75943" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <section id="question">
+        <h1 id="title">Open the BOX</h1>
+        <p class="message">EEEEEE<br>ITS YO BIRTHDAY</p>
+        <div class="choices">
+          <button class="button yes" id="yes" type="button">Yes <span aria-hidden="true">↗</span></button>
+          <span class="no-slot"><button class="button no" id="no" type="button" aria-describedby="hint">No</button></span>
+        </div>
+        <p class="hint" id="hint" aria-live="polite">Yeah don't even try.</p>
+      </section>
+    </article>
+    <div class="side-note" aria-hidden="true">go on, say yes <span>⤴</span></div>
+  </main>
+  <noscript><p class="noscript">Please enable JavaScript to open your birthday surprise.</p></noscript>
+</body>
+</html>

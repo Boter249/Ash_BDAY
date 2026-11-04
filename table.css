@@ -1,0 +1,69 @@
+.table-dialog { width: min(760px, calc(100% - 32px)); }
+.table-dialog h2 { font-size: clamp(30px, 6vw, 44px); letter-spacing: -1px; }
+.table-instructions { margin: 16px auto 0; max-width: 48ch; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.brick-scene { position: relative; width: 100%; aspect-ratio: 640 / 460; margin: 12px auto 0; }
+.table-art { display: block; width: 100%; height: 100%; }
+.loose-brick, .brick-target {
+  position: absolute;
+  width: 17.5%;
+  height: 13.4783%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  touch-action: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.loose-brick svg, .brick-target svg { display: block; width: 100%; height: 100%; pointer-events: none; }
+.loose-brick::after, .brick-target::after { content: ""; position: absolute; inset: -8px; }
+.loose-brick { left: 4.0625%; top: 60.8696%; z-index: 2; cursor: grab; border-radius: 4px; }
+.loose-brick.is-selected { outline: 2px solid var(--green); outline-offset: 4px; }
+.loose-brick.is-dragging { cursor: grabbing; z-index: 3; }
+.loose-brick.is-placed { cursor: default; }
+.brick-target { left: 41.40625%; top: 34.130435%; cursor: pointer; }
+.brick-target svg { stroke: #9F947D; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 6 5; }
+.brick-target.is-ready svg { stroke: var(--green); fill: #DDE8D455; }
+.brick-target.is-over svg { fill: #BDCFAD88; stroke-width: 3; }
+.loose-brick:focus-visible, .brick-target:focus-visible { outline: 3px solid #ba7854; outline-offset: 5px; border-radius: 4px; }
+.table-status { min-height: 24px; margin: 0; color: var(--green); font: italic 14px/1.7 Georgia, serif; }
+.table-audio-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 16px; }
+#table-puzzle { opacity: 1; transition: opacity .45s ease; }
+#table-puzzle.is-fading { opacity: 0; pointer-events: none; }
+.table-gift { padding: 26px 0; animation: table-reveal .5s ease both; }
+.table-gift h2 { max-width: 22ch; margin: 0 auto; line-height: 1.25; }
+#table-gift-title:focus { outline: none; }
+.table-link { max-width: 100%; margin-top: 30px; text-decoration: none; }
+.glass-cracks, .glass-shards { opacity: 0; pointer-events: none; }
+.glass-shard, .falling-brick { transform-box: fill-box; transform-origin: center; }
+.brick-scene.is-shattered .glass-table { opacity: 0; animation: glass-collapse .3s ease both; }
+.brick-scene.is-shattered .glass-cracks { animation: glass-crack .3s ease both; }
+.brick-scene.is-shattered .glass-shards { opacity: 1; }
+.brick-scene.is-shattered .glass-shard {
+  transform: translate(var(--shard-x), var(--shard-y)) rotate(var(--shard-turn));
+  animation: glass-scatter 1.1s cubic-bezier(.3, .05, .7, 1) both;
+}
+.brick-scene.is-shattered .falling-brick {
+  transform: translate(var(--fall-x), var(--fall-y)) rotate(var(--fall-turn));
+  animation: brick-tumble 1.1s cubic-bezier(.3, .05, .7, 1) both;
+}
+.brick-scene.is-shattered .loose-brick.is-placed {
+  transform: translate(12%, 330%) rotate(18deg);
+  animation: top-brick-tumble 1.1s cubic-bezier(.3, .05, .7, 1) both;
+}
+@keyframes glass-collapse { 0%, 35% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes glass-crack { 0% { opacity: 0; } 25%, 70% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes glass-scatter {
+  0%, 12% { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+  20% { opacity: 1; }
+  100% { opacity: .85; transform: translate(var(--shard-x), var(--shard-y)) rotate(var(--shard-turn)); }
+}
+@keyframes brick-tumble {
+  0%, 12% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(var(--fall-x), var(--fall-y)) rotate(var(--fall-turn)); }
+}
+@keyframes top-brick-tumble {
+  0%, 12% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(12%, 330%) rotate(18deg); }
+}
+@keyframes table-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 480px) { .table-instructions { font-size: 12px; } .table-status { font-size: 13px; } }
